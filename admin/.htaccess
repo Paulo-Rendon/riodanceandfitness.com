@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Protected Site"
+AuthUserFile C:\xampp\htdocs\mom_website\homepage\.htpasswd
+require valid-user

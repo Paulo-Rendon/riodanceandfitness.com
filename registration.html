@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Registration</title>
+        <link rel="stylesheet" href="home.css">
+        <script src="reg.js"></script>
+        <script src="enroll.js" id="enrollScript"></script>
+        <script src="testing.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+        <link rel="manifest" href="favicon/site.webmanifest">
+    </head>
+    
+    <body>
+        <script id="replace_with_navbar" src="nav.js"></script>
+        <div class="get_class_section">
+            <p class="get_class_text">This button will show you what future classes you are currently enrolled in. It will be displayed under the calendar below</p>
+            <a class="nav_button_2" onClick="getMember()" style="width: fit-content">Show Enrolled Classes</a>
+        </div>
+        <table id="calendar">
+            <caption>Class Schedule</caption>
+            <tr class="weekdays" id="weekdays">
+                <th>Sunday</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+                <th>Saturday</th>
+            </tr>
+        </table>
+        <h1 id="selected_date"></h1>     
+        <div id="events">
+            <h1 class="title">Select a class!</h1>
+        </div>
+        
+        <div class="popup">
+            <div class="enrollForm" id="enrollForm">
+                <span class="close_button" onClick="togglePopup()">&times;</span>
+                <div class="message" id="message">
+                    <form class="formField">
+                        <h1>Login</h1>
+                        <label for="fname">Enter your first name:</label>
+                        <input type="text" class="form-control" id="fname" name="fname" placeholder="Enter your First Name...">
+                        <label for="lname">Enter your last name:</label>
+                        <input type="text" class="form-control" id="lname" name="lname" placeholder="Enter your Last Name...">
+                        <label for="tel">Enter your phone number:</label>
+                        <input type="tel" class="form-control" id="phonen" name="phonen" placeholder="Enter your phone number..." pattern="[1-9][0-9]{9}" required>
+                        <a class="nav_button_2" onClick="enrollMemberSubmit()">Submit</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    
+    </body>
+</html>

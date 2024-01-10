@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Admin</title>
+        <link rel="stylesheet" href="../home.css">
+        <script src="admin_control.js"></script>
+        <script src="../enroll.js" id="enrollScript"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="../testing.js"></script>
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+        <link rel="manifest" href="../favicon/site.webmanifest">
+    </head>
+    
+    <body>
+        <div class="nav_bar">
+            <img class="logo_img" href="../index.html" src="../pics/studio_logo_trans_broken.png"/>
+            <ul class="nav_list">
+                <a class="nav_button" href="../index.html">Home</a>
+                <a class="nav_button" href="../registration.html">Registration</a>
+                <a class="nav_button" href="../description.html">Class Description</a>
+                <div class="drop_btn_back">
+                    <a class="drop_btn" id="toggle" onClick="toggleSlider()">&#8801;</a>
+                </div>
+            </ul>
+        </div> 
+        <div class="slide" id="slider" style="width: 0px">
+        <div class="slide_content">
+            <a class="drop_options" href="../index.html">Home</a>
+            <a class = "drop_options" href="../registration.html">Registration</a>
+            <a class="drop_options" href="../description.html">Description</a>
+            </div>
+        </div>
+        <div class="columns">
+            <div class="column_container">
+                <h1>Events</h1>
+                <div id="event_section">
+                    <span class="add_button" onClick="addEvent()">&plus;</span>
+                </div>
+            </div>
+            <div class="column_container">
+                <h1>Classes</h1>
+                <div id="class_section">
+                    
+                </div>
+            </div>
+            
+            <div class="column_container">
+                <h1>participants</h1>
+                <div id="enrollment_section">
+                
+                </div>
+            </div>
+        
+        </div>
+        <div class="popup">
+            <div class="enrollForm" id="enrollForm">
+                <span class="close_button" onClick="togglePopup()">&times;</span>
+                <div class="message" id="message">
+                    <form class="formField">
+                        <h1>Login</h1>
+                        <label for="fname">Enter your first name:</label>
+                        <input type="text" class="form-control" id="fname" name="fname" placeholder="Enter your First Name...">
+                        <label for="lname">Enter your last name:</label>
+                        <input type="text" class="form-control" id="lname" name="lname" placeholder="Enter your Last Name...">
+                        <label for="tel">Enter your phone number:</label>
+                        <input type="tel" class="form-control" id="phonen" name="phonen" placeholder="Enter your phone number..." pattern="[1-9][0-9]{9}" required>
+                        <a class="nav_button" onClick="enrollMemberSubmit()">Submit</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    
+    </body>
+</html>

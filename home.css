@@ -1,0 +1,521 @@
+*{
+    margin: 0;
+    padding: 0;
+    --acc-color: hotpink;
+}
+
+p{
+    font-size: 20px;
+    margin-right: 5vw;
+    margin-left: 5vw;
+    font-family: calibri, sans-serif;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: math;
+}
+
+.nav_section{
+    top: 0;
+    position: fixed;
+    width: 100vw;
+    height: max-content;
+}
+    
+.about_us, .get_class_section, #zumba{
+    margin-top: 15vh;
+
+}
+
+.get_class_section{
+    height: fit-content;
+    width: 90vw;
+    display: flex;
+    float: right;
+    margin-right: 5vw;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.get_class_text{
+    width: 50vw; 
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+.get_class_btn{
+    height: auto;
+    width: auto;
+    float: right;
+}
+
+.nav_bar{
+    margin: 0;
+    height: 15vh;
+    background-color: #ffffff;
+}
+
+.logo_img{
+    max-height: 15vh;
+    max-width: 20vw;
+    position: relative;
+    top: 50%;
+    width: auto;
+    float: left;
+    margin-top: auto;
+    margin-bottom: auto;
+    transform: translate(0, -50%);
+}
+
+.nav_list{
+    list-style-type: none;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    float: right;
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.nav_button{
+    padding: 1vw;
+    font-family: "Lucida Bright", "Times New Roman", Times, serif;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.nav_button::after{
+    content: '';
+    display: block;
+    height: 5px;
+    width: 0%;
+    background: var(--acc-color);
+    transition: all ease-in-out 200ms;
+    margin: auto;
+}
+
+.nav_button:hover::after{
+    width: 100%;
+}
+
+.nav_button:hover{
+    color: hotpink;
+    cursor: pointer;
+}
+
+.nav_button_2{
+    padding: 1vw;
+}
+
+.nav_button_2::after{
+    content: '';
+    display: block;
+    height: 5px;
+    width: 0%;
+    background: var(--acc-color);
+    transition: all ease-in-out 200ms;
+    margin: auto;
+}
+
+.nav_button_2:hover::after{
+    width: 100%;
+}
+
+.nav_button_2:hover{
+    color: hotpink;
+    cursor: pointer;
+}
+
+.email{
+    font-family: calibri;
+}
+
+.logo{
+    max-width: 30vw;
+    max-height: 50vh;
+    margin-top: 5vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.slide {
+    position: absolute;
+    height: 90vh;
+    background: var(--acc-color);
+    transition: 0.5s;
+    overflow-x: hidden;
+}
+
+.nav_bar{
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
+    box-shadow: 0 2px 4px 0 var(--acc-color);
+}
+
+
+.slide_content{
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+}
+
+.title{
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5vh;
+    color: var(--acc-color);
+    font-family: "Times New Roman", Times, serif;
+}
+
+.class_desc .title{
+    padding-left: 5vw;
+    text-align: top;
+    margin-left: initial;
+    margin-right: initial;
+    padding-top: initial;
+}
+
+.class_desc p{
+    float: right;
+}
+
+.class_desc{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+}
+
+.class_cont{
+    display: flex;
+    flex-direction: row;
+    min-height: 40vh;
+    margin-top: 5vh;
+}
+
+.class_cont img{
+    width: auto;
+    max-height: 100%;
+}
+
+.about_us{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+}
+
+.about_us_desc{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.contact_me{
+    display: flex;
+    flex-direction: column;
+}
+
+.contact_me_sect{
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table, th, td{
+    border: 1px solid;
+}
+
+#calendar{
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    table-layout: fixed;
+    min-height: 30vh;
+}
+
+#calendar .weekdays{
+    background: var(--acc-color);
+}
+
+#calendar caption{
+    min-height: 10vh;
+    font-size: 50px;
+}
+
+#calendar tr{
+    height: 20vh;
+}
+
+.classes{
+    width: 100vw;
+}
+
+.event{
+    border-radius: 20px;
+    margin-top: 5vh;
+    padding-bottom: 5vh; 
+    background-color: rgba(0, 0, 0, 0.2);
+    
+}
+
+.open_seats{
+    float: right;
+    display: flex;
+    flex-direction: row;
+    margin-right: 2vw;
+}
+
+.seat_count{
+    margin: 0;
+    margin-right: 3vw;
+}
+
+/********** Popup **********/
+.popup{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1,1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.enrollForm{
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 1rem 1.5rem;
+    width: 24rem;
+    border-radius: 0.5rem;
+}
+
+.close_button{
+    float: right;
+    width: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    background-color: lightgray;
+}
+
+.show-popup{
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.formField{
+    display: flex;
+    flex-direction: column;
+}
+
+/********** Admin Controls **********/
+.columns{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+
+.column_container{
+    width: 30vw;
+    height: 90vh;
+    overflow: scroll;
+}
+
+.event_container{
+    padding: 2rem;
+}
+
+.admin_event_desc{
+    margin-left:auto;
+}
+
+.expand_button{
+    float: right;
+    cursor: pointer;
+    background-color: var(--acc-color);
+}
+
+.expand_button:hover{
+    background-color: grey;
+}
+
+.add_button{
+    float: right;
+    width: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    background-color: lightgray;
+}
+
+.remove_button{
+    float: right;
+    width: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    background-color: red;
+}
+
+.edit_btn{
+    cursor: pointer;
+}
+
+.calendar_event_name{
+    font-size: 25px;
+}
+
+.calendar_event_time{
+    font-size: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.eventColumn{
+    cursor: pointer;
+}
+
+.drop_btn_back{
+    display: none;
+}
+
+@media(max-width: 1000px){
+    html, body{
+        overflow-x: hidden;
+        width: 100%;
+    }
+    
+    .logo_img{
+        max-width: 50vw;    
+    }
+    
+    .contact_me_sect{
+        flex-direction: column;
+    }
+    
+    .contact_me_sect a{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    /*.slide{
+        display: none;
+    }*/
+    
+    .logo{
+        width: 100vw;
+        max-width: 100vw;
+        max-height: 100vh;
+        margin-top: 5vh;
+        height: auto;
+    }
+    .nav_button{
+        display: none;
+    }
+    
+    .drop_btn_back{
+        display: initial;
+        background-color: var(--acc-color);
+        height: 100%;
+        width: auto;
+        border-radius: 10px;
+    }
+    
+    .drop_btn{
+        display: initial;
+        font-size: 70px;
+        
+    }
+    
+    .drop_options{
+        font-size: 50px;
+        color: white;
+        background: none;
+    }
+    
+    .get_class_text{
+        display: none;
+    }
+    
+    .get_class_section{
+        width: fit-content;
+        margin-right: inherit;
+    }
+    
+    #calendar{
+        width: 100vw;
+    }
+    
+    th{
+        font-size: 10px;
+    }
+    
+    .calendar_event_name{
+        font-size: 10px;
+    }
+    
+    .calendar_event_time{
+        font-size: 5px;
+    }
+    
+    #calendar tr{
+        height:auto;
+    }
+    
+    #calendar .dates{
+        height:auto;
+    }
+    
+    #calendar{
+        min-height: 20vh;
+    }
+    
+    .class_cont img{
+        display: none;
+    }
+    
+    #zumba{
+        background: url(pics/zumba_logo_fadded.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: #ffffff;
+    }
+    
+    #hiit{
+        background: url(pics/hiit_fadded.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: #ffffff;
+    }
+    
+    #dance{
+        background: url(pics/dance_fadded.webp);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: #ffffff;
+    }
+    
+    #zumbaP{
+        background: url(pics/power_fadded.webp);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: #ffffff;
+    }
+}
